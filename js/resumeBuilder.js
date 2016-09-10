@@ -1,33 +1,3 @@
-/*
-$("#main").append("Olawale AYODELE");
-
-var email = " \n olawaleayodele@gmail.com"
-var newEmail = email.replace("olawaleayodele@gmail.com"," oayodele@chams.com")
-var awesomeThoughts = " \n I am Olawale and I am awesome";
-var funThoughts = awesomeThoughts.replace("awesome", "fun");
-
-console.log(awesomeThoughts);
-console.log(funThoughts);
-console.log(email);
-console.log(newEmail);
-
-$("#main").append(email);
-$("#main").append(newEmail);
-$("#main").append(awesomeThoughts);
-
-
-var name = "Olawale AYODELE";
-var role = "Web Developer";
-
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
-*/
-
-
 var bio = {
 	"name" : "Olawale AYODELE",
 	"role" : "Web Developer",
@@ -108,7 +78,38 @@ var projects = {
 
 }
 
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLSkillsStart);
 
+	var formattedSkill = HTMLSkills.replace("%data%", bio.skills[0];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[1];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[2];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[3];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[4];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[5];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[6];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[7];)
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLSkills.replace("%data%", bio.skills[8];)
+	$("#skills").append(formattedSkill);
+
+
+}
 
 
 
