@@ -6,6 +6,7 @@ var bio = {
 		"email" : "olawaleayodele@gmail.com",
 		"github" : "lahwahleh",
 		"twitter" : "@lahwahleh",
+		"blog": "http://litmusdigital.com.ng/blog"
 		"location": "Matogun, Ogun State, Nigeria"
 		},
 	"biopic" : "images/olawale.jpg",
@@ -112,6 +113,27 @@ if (bio.skills.length > 0) {
 }
 
 
+var skillCount = 0;
+	while (bio.skills.length > 0){
+		$("#header").append(HTMLSkillsStart);
+		var skillCount = skillCount + 1;
+
+	if (skillCount === bio.skills.length)
+
+}
 
 
 
+for (jobs in work.jobs){
+	$("#workExperience").append(HTMLworkStart);
+
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+
+	var formattedTittle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+
+	var formattedEmployerTittle = formattedEmployer + formattedTittle;
+
+	$(".work-entry:last").append(formattedEmployerTittle);
+	
+
+}
