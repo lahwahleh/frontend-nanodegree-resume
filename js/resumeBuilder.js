@@ -43,14 +43,14 @@ var work = {
 var education  = {
 	"schools": [
 		{
-			"name": "Sanngo Sec Sch",
+			"name": "Sanngo Secondary School",
 			"location": "Agege, Lagos",
 			"major": "Sciences",
 			"yearOfGraduation": 2005
 		},
 
 		{
-			"name": "OAU, Ile-Ife",
+			"name": "Obafemi Awolowo University, Ile-Ife",
 			"location": "Osun State, Nigeria",
 			"major": "Computer Engineering",
 			"yearOfGraduation": 2012
@@ -85,7 +85,7 @@ var projects = {
 
 				  {"title" : "Free Code Camp projects",
 				  "dates": "July,2016 - Date",
-				  "description" : "Visit <a href='https://facebook.com/lahwahleh' target='blank'>http://freecodecamp.com/lahwahleh</a> to view my projects and solutions" }
+				  "description" : "Visit <a href='https://freecodecamp.com/lahwahleh' target='blank'>http://freecodecamp.com/lahwahleh</a> to view my projects and solutions" }
 		]
 };
 
@@ -175,3 +175,33 @@ projects.display = function (){
 	}
 }
 
+
+projects.display();
+
+education.display = function() {
+	if (education.schools.length > 0 || education.onlineCourses.length > 0 ) {
+		for (i in education.schools) {
+			$("#education").append(HTMLschoolStart);
+
+			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
+			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
+			var formattedYearOfGraduation = HTMLschoolDates.replace("%data%", education.schools[i].yearOfGraduation);
+			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);			
+		
+
+			$(".education-entry:last").append(formattedSchoolName);
+			$(".education-entry:last").append(formattedYearOfGraduation);
+			$(".education-entry:last").append(formattedSchoolMajor);
+			$(".education-entry:last").append(formattedSchoolLocation);
+		    //$(".education-entry:last").append(formattedSchoolMajor);
+
+		
+
+
+		}
+	}
+}
+
+
+
+education.display();
