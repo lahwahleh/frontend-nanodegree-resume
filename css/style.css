@@ -126,7 +126,7 @@ a {
 }
 
 .dark-gray {
-  background-color: #fff;
+  background-color: #03a9f4;
 }
 
 /* TODO: Replace with image later */
@@ -143,6 +143,9 @@ a {
   padding: 10px;
 }
 
+a{
+  color: #000;
+}
 .flex-column {
   display: flex;
   flex-direction: column;

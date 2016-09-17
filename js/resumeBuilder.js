@@ -5,11 +5,11 @@ var bio = {
 	"contacts": {
 		"mobile": "+2348169858606",
 		"email" : "olawaleayodele@gmail.com",
-		"github" : "lahwahleh",
-		"twitter" : "@lahwahleh",
-		"facebook" : "lahwahleh",
-		"linkedIn" : "Olawale Ayodele",
-		"blog": "<a href='http://litmusdigital.com.ng/blog'>http://litmusdigital.com.ng/blog</a>",
+		"github" : "<a href='https://github.com/lahwahleh' target='blank'>lahwahleh</a>",
+		"twitter" : "<a href='https://twitter.com/lahwahleh' target='blank'>@lahwahleh</a>",
+		"facebook" : "<a href='https://facebook.com/lahwahleh' target='blank'>lahwahleh</a>",,
+		"linkedIn" : "<a href='https://www.linkedin.com/in/lahwahleh' target='blank'>Olawale Ayodele</a>",
+		"blog": "<a href='http://litmusdigital.com.ng/blog' target='blank'>http://litmusdigital.com.ng/blog</a>",
 		"location": "Matogun, Ogun State, Nigeria"
 		},
 	"biopic" : "images/olawale.jpg",
