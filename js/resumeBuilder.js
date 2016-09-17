@@ -44,14 +44,14 @@ var education  = {
 	"schools": [
 		{
 			"name": "Sanngo Sec Sch",
-			"city": "Agege, Lagos",
+			"location": "Agege, Lagos",
 			"major": "Sciences",
 			"yearOfGraduation": 2005
 		},
 
 		{
 			"name": "OAU, Ile-Ife",
-			"city": "Osun State, Nigeria",
+			"location": "Osun State, Nigeria",
 			"major": "Computer Engineering",
 			"yearOfGraduation": 2012
 		}
@@ -59,17 +59,17 @@ var education  = {
 
 	"onlineCourses": [
 		{
-			"name": "Udacity",
-			"city": "Silicon Valley",
-			"major": "Frontend Web Development",
-			"yearOfGraduation": 2016
+			"name": "Free Code Camp",
+			"title": "Frontend Web Development",
+			"url": "freecodecamp.com",
+			"completed": 2016
 		},
 
 		{
-			"name": "Indian Inst of Tech",
-			"city": "bangalore",
-			"major": "Innovation and IT Mgt",
-			"yearOfGraduation": 2016
+			"name": "Indian Institute of Technology",
+			"title": "Innovation and Information Technology Management",
+			"url": "edx.org",
+			"completed": 2016
 		}
 
 	]
@@ -79,11 +79,11 @@ var education  = {
 
 var projects = {
 	"projects" : [
-				{"name" : "KCOBA Mobile App",
+				{"title" : "KCOBA Mobile App",
 				  "dates": "Aug - Sept, 2016",
-				  "description" : "If you havent got a clue, what to do, just right click here and select the Help" },
+				  "description" : "The App allows the alumni of King's College Old Boys' Association (KCOBA) to connect and share information" },
 
-				  {"name" : "Free Code Camp projects",
+				  {"title" : "Free Code Camp projects",
 				  "dates": "July,2016 - Date",
 				  "description" : "Visit <a href='https://facebook.com/lahwahleh' target='blank'>http://freecodecamp.com/lahwahleh</a> to view my projects and solutions" }
 		]
@@ -158,4 +158,20 @@ function displayWork() {
 
 displayWork(); 
 
+projects.display = function (){
+	if (projects.projects.length > 0) {
+		for (i in projects.projects){
+			$("#projects").append(HTMLprojectStart);
+
+			var formattedProjectTittle = HTMLprojectTitle.replace("%data", projects.projects[i].title);
+			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+
+			$(".project-entry:last").append(formattedProjectTittle);
+			$(".project-entry:last").append(formattedProjectDates);
+			$(".project-entry:last").append(formattedProjectDescription);
+		
+		}
+	}
+}
 
