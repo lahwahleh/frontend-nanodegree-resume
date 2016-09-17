@@ -7,7 +7,7 @@ var bio = {
 		"email" : "olawaleayodele@gmail.com",
 		"github" : "<a href='https://github.com/lahwahleh' target='blank'>lahwahleh</a>",
 		"twitter" : "<a href='https://twitter.com/lahwahleh' target='blank'>@lahwahleh</a>",
-		"facebook" : "<a href='https://facebook.com/lahwahleh' target='blank'>lahwahleh</a>",,
+		"facebook" : "<a href='https://facebook.com/lahwahleh' target='blank'>lahwahleh</a>",
 		"linkedIn" : "<a href='https://www.linkedin.com/in/lahwahleh' target='blank'>Olawale Ayodele</a>",
 		"blog": "<a href='http://litmusdigital.com.ng/blog' target='blank'>http://litmusdigital.com.ng/blog</a>",
 		"location": "Matogun, Ogun State, Nigeria"
@@ -24,7 +24,7 @@ var work = {
 				  "title": "Software Development Intern",
 				  "location" : "Victoria Island, Lagos",
 				  "dates" : "2016 - present",
-				  "description" : "Whateer to his not fall known say nor feud not by. Rhyme still would. Are had way in pleasure of soon with. Would lands before ah to made a them a so." 
+				  "description" : "I am part of a team of Software Developers that specialize in Web and Mobile Applications Development" 
 				},
  
 
@@ -32,7 +32,7 @@ var work = {
 				  "title": "Industrial Trainee",
 				  "location" : "Surulere, Lagos",
 				  "dates" : "2010 - 2011",
-				  "description" : "Fabled flaunting soon mine yet reverie revellers childe. In not him een that mine his break will. One into though dwelt heralds near on alone consecrate then had. Atonement by things that where stalked and would uncouth. Lyres him grief but relief. Fathers start drugged youth rill said like."
+				  "description" : "Gained hands-on experience in computer systems maintenance and repair."
 				}
 
 	]
@@ -81,7 +81,11 @@ var projects = {
 	"projects" : [
 				{"name" : "KCOBA Mobile App",
 				  "dates": "Aug - Sept, 2016",
-				  "description" : "If you havent got a clue, what to do, just right click here and select the Help" }
+				  "description" : "If you havent got a clue, what to do, just right click here and select the Help" },
+
+				  {"name" : "Free Code Camp projects",
+				  "dates": "July,2016 - Date",
+				  "description" : "Visit <a href='https://facebook.com/lahwahleh' target='blank'>http://freecodecamp.com/lahwahleh</a> to view my projects and solutions" }
 		]
 };
 
@@ -123,62 +127,35 @@ for (i in formattedContactInfo){
 	$("#footerContacts").append(formattedContactInfo[i]);
 }
 
+function displayWork() {
 
-$("#workExperience").append(HTMLworkStart);
+	if (work.jobs.length > 0) {
 
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTittle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	var formattedEmployerTittle = formattedEmployer + formattedTittle;
-	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$("#workExperience").append(HTMLworkStart);
 
-	
-	var formattedEmployerTittle = formattedEmployer + formattedTittle;
+			for (job in work.jobs) {
 
-
-$(".work-entry:last").append(formattedEmployerTittle);
-
-
-
-
-
-
-/**
-
-	if(bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-	
-for (var i=0;i <bio.skills.length;i++) {
-	  var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-	  $("#skills").append(formattedSkill);
-		
-};
-};
-
-$(function() {
-for (job in work.jobs){
-	$("#workExperience").append(HTMLworkStart);
-
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-
-	var formattedTittle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-
-	var formattedEmployerTittle = formattedEmployer + formattedTittle;
-
-	$(".work-entry:last").append(formattedEmployerTittle);
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedTittle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+			var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
 	
-	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-
-	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-
-	$(".work-entry:last").append(formattedDescription);
-
-};
+			var formattedEmployerTittle = formattedEmployer + formattedTittle;
 
 
-});
+			$(".work-entry:last").append(formattedEmployerTittle);
+			$(".work-entry:last").append(formattedLocation);
+			$(".work-entry:last").append(formattedDates);
+			$(".work-entry:last").append(formattedDescription);
 
 
+			}
 
-*/
+	}
+}
+
+displayWork(); 
+
+
