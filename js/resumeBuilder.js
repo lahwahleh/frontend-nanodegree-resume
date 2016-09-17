@@ -1,97 +1,20 @@
+
 var bio = {
 	"name" : "Olawale AYODELE",
-	"role" : "Web Developer",
+	"role" : "Front-End Web Developer",
 	"contacts": {
-		"mobile": "08169858606",
+		"mobile": "+2348169858606",
 		"email" : "olawaleayodele@gmail.com",
 		"github" : "lahwahleh",
 		"twitter" : "@lahwahleh",
-		"blog": "http://litmusdigital.com.ng/blog"
+		"facebook" : "lahwahleh",
+		"linkedIn" : "Olawale Ayodele",
+		"blog": "<a href='http://litmusdigital.com.ng/blog'>http://litmusdigital.com.ng/blog</a>",
 		"location": "Matogun, Ogun State, Nigeria"
 		},
 	"biopic" : "images/olawale.jpg",
-	"welcomeMessage" : "The end determines the means!",
-	"skills" : [" HTML", " CSS", " Javascript", " Wordpress", " Java", " Python", " Git", " Android App Development", " Microsoft Office Suites"]
-
-};
-
-if (bio.skills.length > 0) {
-	$("#header").append(HTMLSkillsStart);
-
-	var formattedSkill = HTMLSkills.replace("%data%", bio.skills[0];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[1];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[2];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[3];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[4];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[5];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[6];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[7];)
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLSkills.replace("%data%", bio.skills[8];)
-	$("#skills").append(formattedSkill);
-
-
-};
-
-/*
-var skillCount = 0;
-	while (bio.skills.length > 0){
-		$("#header").append(HTMLSkillsStart);
-		var skillCount = skillCount + 1;
-
-	if (skillCount === bio.skills.length)
-
-}
-
-*/
-
-
-var education  = {
-	"schools": [{
-			"name": "Sanngo Sec Sch",
-			"city": "Agege, Lagos",
-			"major": "Sciences",
-			"yearOfGraduation": 2005
-		},
-
-		{
-			"name": "OAU, Ile-Ife",
-			"city": "Osun State, Nigeria",
-			"major": "Computer Engineering",
-			"yearOfGraduation": 2012
-		}
-	],
-
-	"onlineCourses": [{
-			"name": "Udacity",
-			"city": "Silicon Valley",
-			"major": "Frontend Web Development",
-			"yearOfGraduation": 2016
-		},
-
-		{
-			"name": "Indian Inst of Tech",
-			"city": "bangalore",
-			"major": "Innovation and IT Mgt",
-			"yearOfGraduation": 2016
-		}
-
-	]
+	"welcomeMessage" : "I think win-win and I go the extra-mile in getting things done!",
+	"skills" : ["HTML", "CSS", "Bootstrap", "Javascript", "jQuery","Wordpress", "Git Version Control System", "Android App Development"]
 
 };
 
@@ -116,8 +39,124 @@ var work = {
 
 };
 
-function displayWork () {
-for (jobs in work.jobs){
+
+var education  = {
+	"schools": [
+		{
+			"name": "Sanngo Sec Sch",
+			"city": "Agege, Lagos",
+			"major": "Sciences",
+			"yearOfGraduation": 2005
+		},
+
+		{
+			"name": "OAU, Ile-Ife",
+			"city": "Osun State, Nigeria",
+			"major": "Computer Engineering",
+			"yearOfGraduation": 2012
+		}
+	],
+
+	"onlineCourses": [
+		{
+			"name": "Udacity",
+			"city": "Silicon Valley",
+			"major": "Frontend Web Development",
+			"yearOfGraduation": 2016
+		},
+
+		{
+			"name": "Indian Inst of Tech",
+			"city": "bangalore",
+			"major": "Innovation and IT Mgt",
+			"yearOfGraduation": 2016
+		}
+
+	]
+
+};
+
+
+var projects = {
+	"projects" : [
+				{"name" : "KCOBA Mobile App",
+				  "dates": "Aug - Sept, 2016",
+				  "description" : "If you havent got a clue, what to do, just right click here and select the Help" }
+		]
+};
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+
+var formattedContactInfo = [];
+formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
+formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
+formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
+formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+formattedContactInfo.push( HTMLfacebook.replace("%data%", bio.contacts.facebook));
+formattedContactInfo.push(HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn));
+formattedContactInfo.push(HTMLblog.replace("%data%", bio.contacts.blog));
+formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+
+
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMsg);
+
+
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	
+	for (i in bio.skills){
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+	}
+}
+
+
+for (i in formattedContactInfo){
+	//$("#topContacts").append(formattedContactInfo[i]);
+	$("#footerContacts").append(formattedContactInfo[i]);
+}
+
+
+$("#workExperience").append(HTMLworkStart);
+
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedTittle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	var formattedEmployerTittle = formattedEmployer + formattedTittle;
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+	
+	var formattedEmployerTittle = formattedEmployer + formattedTittle;
+
+
+$(".work-entry:last").append(formattedEmployerTittle);
+
+
+
+
+
+
+/**
+
+	if(bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	
+for (var i=0;i <bio.skills.length;i++) {
+	  var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+	  $("#skills").append(formattedSkill);
+		
+};
+};
+
+$(function() {
+for (job in work.jobs){
 	$("#workExperience").append(HTMLworkStart);
 
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -135,36 +174,11 @@ for (jobs in work.jobs){
 
 	$(".work-entry:last").append(formattedDescription);
 
-}
-};
-
-displayWork();
-
-function locationizer (work_obj){
-	var locationArray = [];
-
-	for (job in work_obj.jobs){
-		var newLocation = work_obj.jobs[job].location;
-		locationArray.push(newLocation);
-	}
-return locationArray;
-
-}
-
-
-var projects = {
-	"projects" : [
-				{"name" : "KCOBA Mobile App",
-				  "dates": "Aug - Sept, 2016",
-				  "description" : "If you havent got a clue, what to do, just right click here and select the Help" }
-
-		]
-
-
-
 };
 
 
+});
 
 
 
+*/
